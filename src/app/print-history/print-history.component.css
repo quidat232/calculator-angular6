@@ -1,0 +1,8 @@
+ .history-results {
+    text-align: right;
+    padding-right: 10px;
+    padding: 20px;
+}
+.history-results:hover {
+    background: #b2abab;
+}

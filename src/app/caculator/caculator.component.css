@@ -1,0 +1,83 @@
+.caculator {
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    background: #b6b6b6;
+    position: relative;
+}
+.caculator h4 {
+    padding: 10px 20px;
+    margin: 0;
+}
+.caculator .caculator-flex {
+    display: flex;
+    margin: 0;
+    padding: 5px 0;
+}
+.caculator .caculator-number {
+    width: 60%;
+    padding-left: 10px;
+}
+.caculator .caculator-history {
+    width: 40%;
+}
+
+.caculator .caculator-show {
+    padding: 40px 0px;
+    width: 97%;
+    text-align: right;
+}
+
+button.btn-operator,
+button.btn-result,
+button.btn-number,button.btn-equation ,
+button.btn-classification{
+    width: 135px;
+}
+.caculator .caculator-sum {
+    display: flex;
+}
+
+.caculator .caculator-sum button{
+    padding: 25px;
+    color: black;
+    background: #d6d5d5;
+    border: none;
+    margin: 1px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.caculator .caculator-sum button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 100%;
+}
+.caculator .caculator-sum button.number-btn {
+    background: white;
+}
+.caculator .caculator-sum button p.round {
+    font-size: 30px;
+    font-weight: 600;
+}
+.caculator .caculator-sum button p img {
+    width: 20px;
+    height: 20px;
+}
+.caculator .caculator-sum button:hover {
+    background: #b2abab;
+}

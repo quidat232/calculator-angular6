@@ -1,0 +1,39 @@
+<div class="caculator">
+    <h4>Caculator</h4>
+    <div class="caculator-flex" id="calculator">
+        <div class="caculator-number">
+            <h2>Standard</h2>
+            <div class="caculator-show" id="caculator-show">
+                <span>{{number1}}</span>
+                <span> {{operator}} </span>
+                <span>{{number2}}</span>
+                <div class="clear"></div>
+                <h2>{{result}}</h2>
+                <h2 style="color:red;">{{strMessageError}}</h2>
+            </div>
+            <div class="caculator-sum">
+                <div>
+                    <button class="btn-equation" *ngFor="let i of arrEquation"
+                        (click)="getEquation(i)"><span>{{i}}</span></button>
+                    <button class="btn-number" *ngFor="let i of arrNumber"
+                        (click)="getValue(i)"><span>{{i}}</span></button>
+                </div>
+                <div>
+                    <button class="btn-classification" *ngFor="let i of arrclassi"
+                        (click)="getClassic(i)"><span>{{i}}</span></button>
+                    <button class="btn-operator" *ngFor="let i of arrOperators"
+                        (click)="getOperator(i)"><span>{{i}}</span></button>
+                    <button class="btn-result" *ngFor="let i of arrResult"
+                        (click)="getResult(i)"><span>{{i}}</span></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="caculator-history">
+            <app-print-history [(result)] ="result" [(arrHistoryResult)]="arrHistoryResult"
+            [(arrHistoryValue)]="arrHistoryValue" (change)="changeIndex(index)" >
+            </app-print-history>
+        </div>
+
+    </div>
+</div>
