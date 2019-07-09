@@ -7,6 +7,7 @@
                 <span>{{number1}}</span>
                 <span> {{operator}} </span>
                 <span>{{number2}}</span>
+                <span>{{arrShowValue}}</span>
                 <div class="clear"></div>
                 <h2>{{result}}</h2>
                 <h2 style="color:red;">{{strMessageError}}</h2>
@@ -31,7 +32,8 @@
         </div>
         <div class="caculator-history">
             <app-print-history [(result)] ="result" [(arrHistoryResult)]="arrHistoryResult"
-            [(arrHistoryValue)]="arrHistoryValue" (change)="changeIndex(index)" >
+            [(arrHistoryValue)]="arrHistoryValue" (change)="changeIndex($event)" >
+        <div> {{index}}</div>
             </app-print-history>
         </div>
 

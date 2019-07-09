@@ -1,5 +1,6 @@
 <h2>History</h2>
-<div class="history-results" *ngFor="let item of arrValueChange; let i = index; " (click)=getReturnResult(i) >
-    <p>{{item}} {{arrResultChange[i]}}</p>
+<div class="history-results" *ngFor="let item of arrValueChange; let i = index;" (click)="this.change.emit(i)" >
+    <p>{{item}}</p>
+    <h2>{{arrResultChange[i]}}</h2>
     <hr/>
 </div>

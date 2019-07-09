@@ -12,6 +12,7 @@ export class CaculatorComponent implements OnInit {
     arrEquation = ['%', '√', 'x2', 'CE', 'C', '⌫'];
     arrResult = ['='];
     arrclassi = [ '1/x' ];
+    arrShowValue: string;
     status: string[];
     flag = false;
     flagResult = false;
@@ -32,13 +33,14 @@ export class CaculatorComponent implements OnInit {
     constructor() {
         this.number1 = '';
         this.number2 = '';
+        this.arrShowValue = '';
     }
     screen = document.querySelector('#caculator-show');
     ngOnInit() {}
-   
     getValue($v) {
         if (this.flagResult) {
             this.emptyData();
+            this.arrShowValue = '';
             this.flagResult = false;
         }
         if (this.flag === false) {
@@ -142,6 +144,7 @@ export class CaculatorComponent implements OnInit {
         this.result = this.checkTypeOperator();
         this.arrHistoryValue.push(`${this.number1} ${this.operator} ${this.number2} ${this.iconResult}`);
         this.arrHistoryResult.push(this.result);
+        this.arrShowValue = '';
     }
 
     //  Check kieu operator va tinh toan
@@ -175,8 +178,9 @@ export class CaculatorComponent implements OnInit {
         this.iconResult = '';
         // this.historyValue.splice(0, 1);
     }
-    changeIndex(index) {
-        console.log(index);
-
+    changeIndex(event) {
+        this.emptyData();
+        this.arrShowValue = this.arrHistoryValue[event];
+        this.result = this.arrHistoryResult[event];
     }
 }

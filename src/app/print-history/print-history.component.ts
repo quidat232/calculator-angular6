@@ -14,11 +14,8 @@ export class PrintHistoryComponent implements OnChanges, OnInit {
   arrValueChange: string[] = [];
   arrResultChange: string[] = [];
   valueChange: string[];
-  // boolHistory: false;
   // tslint:disable-next-line:no-output-native
-  @Output() change = new EventEmitter<number>();
-  // tslint:disable-next-line:no-output-native
-  @Output() click =  new EventEmitter<number>();
+  @Output() change = new EventEmitter<any>();
 
   constructor() { }
 
@@ -28,8 +25,5 @@ export class PrintHistoryComponent implements OnChanges, OnInit {
     this.arrValueChange = this.arrHistoryValue;
     this.arrResultChange = this.arrHistoryResult;
   }
-  getReturnResult($index) {
-    console.log($index);
-    this.change.emit($index);
-  }
+
 }
