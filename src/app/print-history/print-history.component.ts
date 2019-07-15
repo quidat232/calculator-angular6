@@ -11,8 +11,9 @@ export class PrintHistoryComponent implements OnChanges, OnInit {
   @Input() arrHistoryValue;
   @Input() arrHistoryResult;
   @Output() returnIndex;
-  arrValueChange: string[] = [];
-  arrResultChange: string[] = [];
+  arrValueChange: any[] = [];
+  arrResultChange: any[] = [];
+  strObj;
   valueChange: string[];
   // tslint:disable-next-line:no-output-native
   @Output() change = new EventEmitter<any>();
@@ -24,6 +25,8 @@ export class PrintHistoryComponent implements OnChanges, OnInit {
   ngOnChanges() {
     this.arrValueChange = this.arrHistoryValue;
     this.arrResultChange = this.arrHistoryResult;
+    console.log(this.arrValueChange);
+    console.log(this.arrResultChange);
   }
 
 }
